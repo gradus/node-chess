@@ -5,7 +5,7 @@ coffeekup = require('./lib/coffeekup.coffee')
 
 # fs = require('fs')
 #underscore not yet in use
-_ = require('underscore')
+# _ = require('underscore')
 meryl = require('meryl')
 
 meryl.p(connect.static('public'))
