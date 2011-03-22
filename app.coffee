@@ -1,10 +1,11 @@
 connect = require('./lib/connect')
 sys = require("sys")
 http = require('http')
+coffeekup = require('coffeekup')
+
 # fs = require('fs')
 #underscore not yet in use
 _ = require('underscore')
-coffeekup = require('coffeekup')
 meryl = require('meryl')
 
 meryl.p(connect.static('public'))
