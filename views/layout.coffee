@@ -14,5 +14,5 @@ html ->
       div id: 'footer', ->
         span -> img src: '/images/coffeescript.png'
         p ->
-          em 'Powered with Meryl, Node.js, coffee-script, and coffeeKup!'
+          em 'Powered with Meryl, Node.js, Redis, coffee-script, and coffeeKup!'
 
