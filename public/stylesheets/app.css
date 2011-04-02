@@ -52,7 +52,6 @@ a:hover {
 
 #content ul {
   list-style: none;
-  float:left;
 }
 
 #content li {
@@ -61,9 +60,9 @@ a:hover {
   font-size: 18px;
 }
 
-#content img { margin: 10px;}
+#left img { margin: 10px; }
 
-#chat_input {float:right;}
+#chat_input {margin-top:20px;}
 
 #messages {
   display: none;
@@ -111,6 +110,26 @@ a:hover {
  cursor: pointer;
 }
 
+#chessboard {
+  margin-left: 30px;
+}
+
+img.chess_piece{
+  margin-left: 18px;
+}
+
+#chessboard table tr td.light{
+  width: 60px;
+  height: 60px;
+  background: url('../images/light_square.png')
+}
+
+#chessboard table tr td.dark{
+  width: 60px;
+  height: 60px;
+  background: url('../images/dark_square.png')
+}
+
 #footer {
   background-color: seaShell;
   width: 100%;
@@ -137,5 +156,4 @@ a:hover {
 #clear {
   clear: both;
 }
-
 

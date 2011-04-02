@@ -1,9 +1,7 @@
 connect = require('./lib/connect')
-sys = require("sys")
-http = require('http')
-_ = require('underscore')
-coffeekup = require('./lib/coffeekup.coffee')
+coffeekup = require('coffeekup')
 meryl = require('meryl')
+now = require("now")
 redis = require("redis")
 client = redis.createClient(9010, 'bass.redistogo.com')
 dbAuth = () -> client.auth('e212a2dcfe7eed6c849ddfce6c6c0e15')
@@ -39,11 +37,15 @@ server = connect(
     templateDir: 'views'
     connect.logger()
 )
-server.listen(8984)
+server.listen(8975)
 console.log 'listening...'
 
-everyone = require("now").initialize(server)
+everyone = now.initialize(server)
 everyone.now.distributeMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
+
+everyone.connected(  () ->
+  everyone.now.receiveMessage("name", "message")
+)
 
 people = ['Animal', 'Beaker', 'Piggy', 'Kermit']
