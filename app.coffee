@@ -37,7 +37,7 @@ server = connect(
     templateDir: 'views'
     connect.logger()
 )
-server.listen(8975)
+server.listen(8984)
 console.log 'listening...'
 
 everyone = now.initialize(server)
