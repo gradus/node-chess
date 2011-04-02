@@ -70,13 +70,11 @@ coffeescript ->
 
     setPosition = (className, top, left) ->
       $("#messages").show()
-      now.distributeMessage('has moved')
       now.updateElement(className, top, left) 
     
     className = ""
     $( ".chess_piece" ).draggable(
       opacity: 0.55
-      refreshPositions: true
       start: (event, ui) ->
         className = ui.helper.context.className.toString()
         startTop = ui.offset.top
@@ -85,7 +83,7 @@ coffeescript ->
         piecePath= ui.helper.context.src.match(/chess_pieces*.*/)
         pieceName = piecePath.toString().replace("chess_pieces/", "")
         setPosition(className, ui.position.top, ui.position.left)
-        now.distributeMessage('has moved a piece')
+        now.distributeMessage('has moved')
       )
 
     if $.cookie('klop_name')
@@ -113,6 +111,10 @@ coffeescript ->
       if message
         $("#messages").append("<p>" + name + ": " + message + "</p>")
     now.receiveElement= (className, top, left) ->
+      console.log className
+      console.log top
+      console.log left
+
       $(".#{className.replace(" ",  ".").replace(" ui-draggable", "")}").css({"position":"relative","left":"#{left}px","top":"#{top}px"})
 
 
