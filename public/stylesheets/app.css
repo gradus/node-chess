@@ -42,10 +42,12 @@ a:hover {
 }
 #content ul {
   list-style: none;
+  float:left;
 }
 
 #content img { margin: 10px;}
 
+#messages {float:right;}
 
 #footer {
   background-color: seaShell;

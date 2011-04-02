@@ -42,4 +42,8 @@ server = connect(
 server.listen(8984)
 console.log 'listening...'
 
+everyone = require("now").initialize(server)
+everyone.now.distributeMessage = (message) ->
+  everyone.now.receiveMessage(this.now.name, message)
+
 people = ['Animal', 'Beaker', 'Piggy', 'Kermit']
