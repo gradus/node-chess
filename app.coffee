@@ -1,5 +1,5 @@
 connect = require('./lib/connect')
-coffeekup = require('coffeekup')
+coffeekup = require('./lib/coffeekup.coffee')
 meryl = require('meryl')
 now = require("now")
 redis = require("redis")
