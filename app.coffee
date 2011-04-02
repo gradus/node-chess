@@ -44,8 +44,8 @@ everyone = now.initialize(server)
 everyone.now.distributeMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
 
-everyone.connected(  () ->
-  everyone.now.receiveMessage("name", "message")
-)
+# everyone.connected(  () ->
+#   everyone.now.receiveMessage("name", "message")
+# )
 
 people = ['Animal', 'Beaker', 'Piggy', 'Kermit']
