@@ -4,11 +4,10 @@ ul ->
   for name, index in @people
     li -> 
       a href: "/people/#{index}", -> name
+div id: 'messages'
 div id: 'chat_input', ->
   input id: 'text_input', type: 'text'
   input id: 'send_button', type: 'submit', value: 'Chat'
-div id: 'clear'
-div id: 'messages'
 
 coffeescript ->
   jQuery(document).ready ->
@@ -31,5 +30,3 @@ coffeescript ->
     )
     now.receiveMessage = (name, message) ->
       $("#messages").append("<p>" + name + ": " + message + "</p>")
-
-
