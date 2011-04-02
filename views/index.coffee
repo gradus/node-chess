@@ -110,7 +110,8 @@ coffeescript ->
     )
 
     now.receiveMessage = (name, message) ->
-      $("#messages").append("<p>" + name + ": " + message + "</p>")
+      if message
+        $("#messages").append("<p>" + name + ": " + message + "</p>")
     now.receiveElement= (className, top, left) ->
       $(".#{className.replace(" ",  ".").replace(" ui-draggable", "")}").css({"position":"relative","left":"#{left}px","top":"#{top}px"})
 
