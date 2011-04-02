@@ -44,7 +44,7 @@ everyone = now.initialize(server)
 everyone.now.distributeMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
 
-everyone.connected(  () ->
+everyone.connected(  (message) ->
   everyone.now.receiveMessage(this.now.name, message)
 )
 
