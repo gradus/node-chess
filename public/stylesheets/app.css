@@ -5,6 +5,12 @@ body {
 
 }
 
+h2 {
+  color: #999;
+  font-size: 27px;
+  margin: 10px 0 0 20px;
+}
+
 h3 {
   color: #999
 }
@@ -15,7 +21,7 @@ a, a:visited {
 }
 
 a:hover {
-  color: #191919;
+  color: #ffA400;
 }
 
 #wrap {
@@ -40,14 +46,67 @@ a:hover {
   border-radius: 5px;
   color: #171717;
 }
+
 #content ul {
   list-style: none;
   float:left;
 }
 
+#content li {
+  display: inline;
+  padding: 0px 30px;
+  font-size: 18px;
+}
+
 #content img { margin: 10px;}
 
-#messages {float:right;}
+#chat_input {float:right;}
+
+#messages {
+  display: none;
+  background-color: #cccfcc;
+  padding: 1px 6px;
+  color: #161616;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+}
+
+#messages p{
+ color: #161616;
+ text-align: left;
+ margin-left: 4px;
+ background-color: seaShell;
+ padding: 5px 10px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+}
+
+#text_input{
+  width: 450px;
+  height: 25px;
+  font-size:20px;
+  color: #666;
+  margin: 10px 0;
+}
+
+#send_button {
+ color: #ffffff;
+ background-color:#ffA400;
+ border-width:1px;
+ border-style:solid;
+ border-bottom-color:#ff6200;
+ border-right-color:#f06400;
+ border-top-color:#f9FF05;
+ border-left-color:#f9FF09;
+ font-size:22px;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ }
+ 
+#send_button:hover {
+ background-color:#ffCC00;
+ cursor: pointer;
+}
 
 #footer {
   background-color: seaShell;
@@ -75,3 +134,4 @@ a:hover {
 #clear {
   clear: both;
 }
+
