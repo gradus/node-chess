@@ -75,15 +75,14 @@ coffeescript ->
     className = ""
     $( ".chess_piece" ).draggable(
       opacity: 0.55
+      refreshPositions: true
       start: (event, ui) ->
         className = ui.helper.context.className.toString()
-        startTop = ui.offset.top
-        start_left = ui.offset.left
       stop: (event, ui) ->
         piecePath= ui.helper.context.src.match(/chess_pieces*.*/)
         pieceName = piecePath.toString().replace("chess_pieces/", "")
         setPosition(className, ui.position.top, ui.position.left)
-        now.distributeMessage('has moved')
+        now.distributeMessage('has moved a piece')
       )
 
     if $.cookie('klop_name')
@@ -91,11 +90,6 @@ coffeescript ->
     else
       now.name = prompt("What's your name?", "")
       $.cookie('klop_name', now.name)
-
-    $( ".chess_piece" ).draggable(
-      stop: (event, ui) ->
-        console.log "moved a piece"
-      )
 
     $("#text_input").keyup (event) ->
       if event.keyCode == 13
