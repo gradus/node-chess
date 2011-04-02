@@ -3,8 +3,9 @@ html ->
   head ->
     title 'KLOP is coming'
     link rel: 'stylesheet', href: '/stylesheets/app.css'
-    script type: 'text/javascript', src: 'http://plop.nodester.com/nowjs/now.js'
+    script type: 'text/javascript', src: '/nowjs/now.js'
     script type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'
+    script type: 'text/javascript', src: '/javascripts/jquery.cookie.js'
   body ->
     div id: 'wrap', ->
       div id: 'header', ->

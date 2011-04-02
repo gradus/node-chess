@@ -9,11 +9,15 @@ div id: 'messages', ->
   input id: 'send_button', type: 'submit'
 div id: 'clear'
 coffeescript ->
-  now.name = prompt("What's your name?", "")
-  $("#send_button").click( () ->
-    console.log "yo"
-    now.distributeMessage($("#text_input").val())
-    $("#text_input").val("")
-  )
-  now.receiveMessage = (name, message) ->
-    $("#messages").append("<br>" + name + ": " + message)
+  jQuery(document).ready ->
+    if $.cookie('klop_name')
+      now.name = $.cookie('klop_name')
+    else
+      now.name = prompt("What's your name?", "")
+      $.cookie('klop_name', now.name)
+    $("#send_button").click( () ->
+      now.distributeMessage($("#text_input").val())
+      $("#text_input").val("")
+    )
+    now.receiveMessage = (name, message) ->
+      $("#messages").append("<br>" + name + ": " + message)
