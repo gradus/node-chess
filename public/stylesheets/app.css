@@ -2,7 +2,9 @@ body {
   background-color: #ccc;
   font-family: georgia;
   color: #666;
-
+  margin: 10px 10px; 
+  padding: 0px;
+	text-align: center;
 }
 
 h2 {
@@ -25,13 +27,14 @@ a:hover {
 }
 
 #wrap {
-  width:900px; 
-  margin:5px auto;
+	width:500px;
+	margin:0px auto;
+	text-align:left;
 }
 
 #header {
   background-color: seaShell;
-  width: 60%;
+  width: 100%;
   padding: 10px;
   text-align: center;
   margin-bottom: 4px;
@@ -40,7 +43,7 @@ a:hover {
 
 #content {
   background-color: whitesmoke;
-  width: 60%;
+  width: 100%;
   padding: 10px;
   margin: 5px 0;
   border-radius: 5px;
@@ -110,7 +113,7 @@ a:hover {
 
 #footer {
   background-color: seaShell;
-  width: 60%;
+  width: 100%;
   padding: 10px;
   text-align: right;
   margin-bottom: 4px;
