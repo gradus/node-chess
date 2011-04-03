@@ -40,15 +40,15 @@ server = connect(
 server.listen(8984)
 console.log 'listening...'
 
-# everyone = now.initialize(server)
-# everyone.now.distributeMessage = (message) ->
-#   everyone.now.receiveMessage(this.now.name, message)
+everyone = now.initialize(server)
+everyone.now.distributeMessage = (message) ->
+  everyone.now.receiveMessage(this.now.name, message)
 
-# everyone.connected(  (message) ->
-#   everyone.now.receiveMessage(this.now.name, message)
-# )
+everyone.connected(  (message) ->
+  everyone.now.receiveMessage(this.now.name, message)
+)
 
-# everyone.now.updateElement = (className, top, left) ->
-#   everyone.now.receiveElement(className, top, left)
+everyone.now.updateElement = (className, top, left) ->
+  everyone.now.receiveElement(className, top, left)
 
 people = ['Animal', 'Beaker', 'Piggy', 'Kermit']
