@@ -1,3 +1,2 @@
-// require("coffee-script")
-now = require("now")
+require("coffee-script")
 require('./app.coffee')
