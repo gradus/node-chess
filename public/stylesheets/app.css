@@ -85,11 +85,11 @@ a:hover {
 }
 
 #text_input{
-  width: 470px;
+  width: 468px;
   height: 22px;
   font-size:18px;
   color: #666;
-  margin: 5px 5px 0 45px;
+  margin: 5px 2px 0 45px;
 }
 
 #send_button {
