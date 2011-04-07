@@ -10,7 +10,8 @@ body {
 h2 {
   color: #999;
   font-size: 27px;
-  margin: 10px 0 0 20px;
+  margin: 0px 0 0 20px;
+  padding: 0
 }
 
 h3 {
