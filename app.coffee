@@ -5,6 +5,7 @@ now = require("now")
 redis = require("redis")
 client = redis.createClient(9010, 'bass.redistogo.com')
 dbAuth = () -> client.auth('e212a2dcfe7eed6c849ddfce6c6c0e15')
+
 client.addListener('connected', dbAuth)
 client.addListener('reconnected', dbAuth)
 dbAuth()
