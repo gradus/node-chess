@@ -68,7 +68,7 @@ a:hover {
 #messages {
   display: none;
   background-color: #cccfcc;
-  padding: 1px 6px;
+  padding: 1px 3px;
   color: #161616;
  -moz-border-radius: 5px;
  -webkit-border-radius: 5px;
@@ -85,11 +85,11 @@ a:hover {
 }
 
 #text_input{
-  width: 460px;
+  width: 470px;
   height: 22px;
   font-size:18px;
   color: #666;
-  margin: 5px 0 0 40px;
+  margin: 5px 5px 0 45px;
 }
 
 #send_button {
