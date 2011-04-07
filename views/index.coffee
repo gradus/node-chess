@@ -1,9 +1,3 @@
-h2 -> 
-  "The following Muppets are involved"
-ul ->
-  for name, index in @people
-    li -> 
-      a href: "/people/#{index}", -> name
 div id: 'messages'
 div id: 'chat_input', ->
   input id: 'text_input', type: 'text'
