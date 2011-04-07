@@ -9,7 +9,7 @@ body {
 
 h2 {
   color: #999;
-  font-size: 27px;
+  font-size: 23px;
   margin: 0px 0 0 20px;
   padding: 0
 }
@@ -63,7 +63,7 @@ a:hover {
 
 #left img { margin: 10px; }
 
-#chat_input {margin-top:10px;}
+#chat_input {margin:4px 0 0 10px;}
 
 #messages {
   display: none;
@@ -85,11 +85,11 @@ a:hover {
 }
 
 #text_input{
-  width: 510px;
-  height: 25px;
-  font-size:20px;
+  width: 500px;
+  height: 22px;
+  font-size:18px;
   color: #666;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 #send_button {
@@ -112,7 +112,7 @@ a:hover {
 }
 
 #chessboard {
-  margin-left: 50px;
+  margin-left: 60px;
 }
 
 img.chess_piece{
