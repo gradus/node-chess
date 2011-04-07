@@ -1,8 +1,3 @@
-div id: 'messages'
-div id: 'chat_input', ->
-  input id: 'text_input', type: 'text'
-  input id: 'send_button', type: 'submit', value: 'Chat'
-
 div id: 'chessboard', ->
   table cellpadding: 0, cellspacing: 0, ->
     for num in [8..1]
@@ -56,6 +51,12 @@ div id: 'chessboard', ->
                 img src: 'images/chess_pieces/black_bishop.png', class: "chess_piece #{num+letter}"
               if num == 8 and letter == 'e'
                 img src: 'images/chess_pieces/black_queen.png', class: "chess_piece #{num+letter}"
+div id: 'chat_input', ->
+  input id: 'text_input', type: 'text'
+  input id: 'send_button', type: 'submit', value: 'Chat'
+
+div id: 'messages'
+
 coffeescript ->
   jQuery(document).ready ->
     now.ready ->
@@ -97,7 +98,7 @@ coffeescript ->
 
     now.receiveMessage = (name, message) ->
       if message
-        $("#messages").append("<p>" + name + ": " + message + "</p>")
+        $("#messages").prepend("<p>" + name + ": " + message + "</p>")
 
     now.receiveElement= (className, top, left) ->
       $(".#{className.replace(" ",  ".").replace(" ui-draggable", "")}").css({"position":"relative","left":"#{left}px","top":"#{top}px"})
