@@ -9,7 +9,7 @@ body {
 
 h2 {
   color: #999;
-  font-size: 23px;
+  font-size: 18px;
   margin: 0px 0 0 20px;
   padding: 0
 }
@@ -85,11 +85,11 @@ a:hover {
 }
 
 #text_input{
-  width: 500px;
+  width: 480px;
   height: 22px;
   font-size:18px;
   color: #666;
-  margin: 5px 0;
+  margin: 5px 0 0 20px;
 }
 
 #send_button {
