@@ -19,5 +19,6 @@ html ->
         span -> img src: '/images/coffeescript.png'
         p ->
           em 'Powered with Meryl, Node.js, coffee-script, Redis nowJS and coffeeKup!'
-          a href: 'http://github.com/gradus/node-chess', ->
+          br
+          a href: 'http://github.com/gradus/node-chess', style: 'padding-left:50px', ->
             'Source Code'
