@@ -63,7 +63,7 @@ a:hover {
 
 #left img { margin: 10px; }
 
-#chat_input {margin:4px 0 0 10px;}
+#chat_input {margin:4px 0 3px 10px;}
 
 #messages {
   display: none;
@@ -85,11 +85,11 @@ a:hover {
 }
 
 #text_input{
-  width: 480px;
+  width: 460px;
   height: 22px;
   font-size:18px;
   color: #666;
-  margin: 5px 0 0 20px;
+  margin: 5px 0 0 40px;
 }
 
 #send_button {
@@ -112,7 +112,7 @@ a:hover {
 }
 
 #chessboard {
-  margin-left: 60px;
+  margin-left: 55px;
 }
 
 img.chess_piece{
