@@ -11,8 +11,8 @@ html ->
     div id: 'wrap', ->
       div id: 'header', ->
         a href: '/', ->
-          h1 ->
-            "KLOP is Coming"
+          h3 ->
+            "Node Chess"
       div id: 'content',
         -> @render @content, @context
       div id: 'footer', ->
