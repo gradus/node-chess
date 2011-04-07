@@ -11,7 +11,7 @@ html ->
     div id: 'wrap', ->
       div id: 'header', ->
         a href: '/', ->
-          h3 ->
+          h2 ->
             "Node Chess"
       div id: 'content',
         -> @render @content, @context
