@@ -1,5 +1,5 @@
 connect = require('./lib/connect')
-coffeekup = require('coffeekup')
+coffeekup = require('./lib/coffeekup')
 meryl = require('meryl')
 now = require("now")
 
@@ -16,7 +16,7 @@ server = connect(
     templateDir: 'views'
     connect.logger()
 )
-server.listen(8888)
+server.listen(80)
 console.log 'listening...'
 
 everyone = now.initialize(server)
