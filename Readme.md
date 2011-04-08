@@ -1,9 +1,9 @@
-##Node Chess
+#Node Chess
 
 This is a work in progress
 Basic proof of concept is there and you can play.
 
-#Install Modules
+##Install Modules
 
 npm install coffee-script
 
@@ -17,10 +17,10 @@ npm install qs
 
 npm install mime
 
-#Run it
+##Run it
 
 coffee app.coffee
 
-#check it out
+##check it out
 
 http://localhost:8888
