@@ -77,7 +77,7 @@ coffeescript ->
         piecePath= ui.helper.context.src.match(/chess_pieces*.*/)
         pieceName = piecePath.toString().replace("chess_pieces/", "")
         setPosition(className, ui.position.top, ui.position.left)
-        now.distributeMessage("moved a #{pieceName.replace('_', ' ').replace('.png', '')}")
+        now.distributeMoveMessage("moved a #{pieceName.replace('_', ' ').replace('.png', '')}")
       )
 
     if $.cookie('klop_name')
@@ -97,6 +97,10 @@ coffeescript ->
     )
 
     now.receiveMessage = (name, message) ->
+      if message
+        $("#messages").prepend("<p>" + name + ": " + message + "</p>")
+
+    now.receiveMoveMessage = (name, message) ->
       if message
         $("#messages").prepend("<p>" + name + ": " + message + "</p>")
 
