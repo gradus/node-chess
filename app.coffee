@@ -1,16 +1,8 @@
 connect = require('./lib/connect')
-# coffeekup = require('./lib/coffeekup')
-coffeekup = require('coffeekup')
+coffeekup = require('./lib/coffeekup')
 meryl = require('meryl')
 now = require("now")
 play = require('play')
-# play.sound('./wavs/sfx/intro.wav', () ->
-#   play.sound('./wavs/sfx/alarm.wav')
-#   play.sound('./wavs/sfx/crinkle.wav')
-#   play.sound('./wavs/sfx/flush.wav')
-#   play.sound('./wavs/sfx/ding.wav')
-#  )
-
 
 meryl.p(connect.static('public'))
 
@@ -25,8 +17,8 @@ server = connect(
     templateDir: 'views'
     connect.logger()
 )
-# server.listen(80)
-server.listen(8888)
+server.listen(80)
+#server.listen(8888)
 
 console.log 'listening...'
 
