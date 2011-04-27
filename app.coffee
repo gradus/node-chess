@@ -19,8 +19,8 @@ server = connect(
     templateDir: 'views'
     connect.logger()
 )
-#server.listen(80)
-server.listen(8888)
+server.listen(80)
+#server.listen(8888)
 
 console.log 'listening...'
 
@@ -35,7 +35,6 @@ everyone.connected(  (message) ->
 
 everyone.now.updateElement = (className, top, left) ->
   everyone.now.receiveElement(className, top, left)
-
 
 everyone.now.distributeMoveMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
