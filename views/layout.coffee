@@ -9,7 +9,7 @@ html ->
     script type: 'text/javascript', src: '/javascripts/jquery.cookie.js'
   body ->
     audio autoplay: 'autoplay', ->
-      source src: '/wavs/sfx/intro.wav', type: 'audio/wav'
+      source src: '/wavs/sfx/ding.wav', type: 'audio/wav'
 
     div id: 'wrap', ->
       div id: 'header', ->
