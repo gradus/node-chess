@@ -2,11 +2,9 @@ connect = require('./lib/connect')
 coffeekup = require('./lib/coffeekup')
 meryl = require('meryl')
 now = require("now")
-play = require('play')
-sys = require('sys')
-exec = require('child_process').exec
-
-puts = (error, stdout, stderr) -> sys.puts(stdout)
+# sys = require('sys')
+# exec = require('child_process').exec
+# puts = (error, stdout, stderr) -> sys.puts(stdout)
 
 meryl.p(connect.static('public'))
 
@@ -29,21 +27,18 @@ console.log 'listening...'
 everyone = now.initialize(server)
 everyone.now.distributeMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
-  play.sound('./public/wavs/sfx/ding.wav')
 
 
 everyone.connected(  (message) ->
   everyone.now.receiveMessage(this.now.name, message)
-  play.sound('./public/wavs/sfx/ding.wav')
-
 )
 
 everyone.now.updateElement = (className, top, left) ->
   everyone.now.receiveElement(className, top, left)
-  play.sound('./public/wavs/drums/kick.wav')
+
 
 everyone.now.distributeMoveMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
-  exec("say #{this.now.name} #{message}", puts)
+  # exec("say #{this.now.name} #{message}", puts)
 
 

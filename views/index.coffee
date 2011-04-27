@@ -59,14 +59,18 @@ div id: 'messages'
 
 coffeescript ->
   jQuery(document).ready ->
+    playSound = (audiotag) ->
+      document.getElementById(audiotag).play()
+
     now.ready ->
       $("#messages").show()
       now.distributeMessage('has connected')
+      playSound('audiotag2')
 
     setPosition = (className, top, left) ->
       $("#messages").show()
-      now.updateElement(className, top, left) 
-    
+      now.updateElement(className, top, left)
+
     className = ""
     $( ".chess_piece" ).draggable(
       opacity: 0.55
@@ -78,6 +82,7 @@ coffeescript ->
         pieceName = piecePath.toString().replace("chess_pieces/", "")
         setPosition(className, ui.position.top, ui.position.left)
         now.distributeMoveMessage("moved a #{pieceName.replace('_', ' ').replace('.png', '')}")
+        playSound('audiotag')
       )
 
     if $.cookie('klop_name')
@@ -90,10 +95,14 @@ coffeescript ->
       if event.keyCode == 13
         now.distributeMessage($("#text_input").val())
         $("#text_input").val("")
+        playSound('audiotag2')
+
 
     $("#send_button").click( () ->
       now.distributeMessage($("#text_input").val())
       $("#text_input").val("")
+      playSound('audiotag2')
+
     )
 
     now.receiveMessage = (name, message) ->
