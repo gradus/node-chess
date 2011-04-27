@@ -29,6 +29,7 @@ console.log 'listening...'
 everyone = now.initialize(server)
 everyone.now.distributeMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
+  play.sound('./public/wavs/sfx/ding.wav')
 
 
 everyone.connected(  (message) ->
@@ -39,7 +40,7 @@ everyone.connected(  (message) ->
 
 everyone.now.updateElement = (className, top, left) ->
   everyone.now.receiveElement(className, top, left)
-  play.sound('./public/wavs/sfx/ding.wav')
+  play.sound('./public/wavs/drums/kick.wav')
 
 everyone.now.distributeMoveMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
