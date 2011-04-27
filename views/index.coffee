@@ -62,7 +62,7 @@ coffeescript ->
     now.ready ->
       $("#messages").show()
       now.distributeMessage('has connected')
-      now.receiveSound('ding')
+      now.distributeSound('ding')
 
     setPosition = (className, top, left) ->
       $("#messages").show()
@@ -79,7 +79,7 @@ coffeescript ->
         pieceName = piecePath.toString().replace("chess_pieces/", "")
         setPosition(className, ui.position.top, ui.position.left)
         now.distributeMessage("moved a #{pieceName.replace('_', ' ').replace('.png', '')}")
-        now.receiveSound('snare') 
+        now.distributeSound('snare') 
       )
 
     if $.cookie('klop_name')
@@ -92,12 +92,12 @@ coffeescript ->
       if event.keyCode == 13
         now.distributeMessage($("#text_input").val())
         $("#text_input").val("")
-        now.receiveSound('ding')
+        now.distributeSound('ding')
 
     $("#send_button").click( () ->
       now.distributeMessage($("#text_input").val())
       $("#text_input").val("")
-      now.receiveSound('ding')
+      now.distributeSound('ding')
     )
 
     now.receiveMessage = (name, message) ->
