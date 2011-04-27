@@ -21,8 +21,8 @@ server = connect(
     templateDir: 'views'
     connect.logger()
 )
-server.listen(80)
-#server.listen(8888)
+#server.listen(80)
+server.listen(8888)
 
 console.log 'listening...'
 
