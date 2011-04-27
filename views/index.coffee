@@ -59,13 +59,10 @@ div id: 'messages'
 
 coffeescript ->
   jQuery(document).ready ->
-    playSound = (audiotag) ->
-      document.getElementById(audiotag).play()
-
     now.ready ->
       $("#messages").show()
       now.distributeMessage('has connected')
-      playSound('audiotag2')
+      now.receiveSound('ding')
 
     setPosition = (className, top, left) ->
       $("#messages").show()
@@ -81,8 +78,8 @@ coffeescript ->
         piecePath= ui.helper.context.src.match(/chess_pieces*.*/)
         pieceName = piecePath.toString().replace("chess_pieces/", "")
         setPosition(className, ui.position.top, ui.position.left)
-        now.distributeMoveMessage("moved a #{pieceName.replace('_', ' ').replace('.png', '')}")
-        playSound('audiotag')
+        now.distributeMessage("moved a #{pieceName.replace('_', ' ').replace('.png', '')}")
+        now.receiveSound('snare') 
       )
 
     if $.cookie('klop_name')
@@ -95,23 +92,19 @@ coffeescript ->
       if event.keyCode == 13
         now.distributeMessage($("#text_input").val())
         $("#text_input").val("")
-        playSound('audiotag2')
-
+        now.receiveSound('ding')
 
     $("#send_button").click( () ->
       now.distributeMessage($("#text_input").val())
       $("#text_input").val("")
-      playSound('audiotag2')
-
+      now.receiveSound('ding')
     )
 
     now.receiveMessage = (name, message) ->
       if message
         $("#messages").prepend("<p>" + name + ": " + message + "</p>")
-
-    now.receiveMoveMessage = (name, message) ->
-      if message
-        $("#messages").prepend("<p>" + name + ": " + message + "</p>")
-
     now.receiveElement= (className, top, left) ->
       $(".#{className.replace(" ",  ".").replace(" ui-draggable", "")}").css({"position":"relative","left":"#{left}px","top":"#{top}px"})
+    now.receiveSound= (audiotag) ->
+      document.getElementById(audiotag).play()
+

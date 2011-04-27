@@ -8,8 +8,8 @@ html ->
     script type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js'
     script type: 'text/javascript', src: '/javascripts/jquery.cookie.js'
   body ->
-    audio id: 'audiotag', src: '/wavs/drums/tick.wav', type: 'audio/wav'
-    audio id: 'audiotag2', src: '/wavs/sfx/ding.wav', type: 'audio/wav'
+    audio id: 'ding', src: '/wavs/sfx/ding.wav', type: 'audio/wav'
+    audio id: 'snare', src: '/wavs/drums/snare.wav', type: 'audio/wav'
     div id: 'wrap', ->
       div id: 'header', ->
         a href: '/', ->
