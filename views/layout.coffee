@@ -8,6 +8,9 @@ html ->
     script type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js'
     script type: 'text/javascript', src: '/javascripts/jquery.cookie.js'
   body ->
+    audio autoplay: 'autoplay', ->
+      source src: '/wavs/sfx/intro.wav', type: 'audio/wav'
+
     div id: 'wrap', ->
       div id: 'header', ->
         a href: '/', ->

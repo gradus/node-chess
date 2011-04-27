@@ -33,13 +33,13 @@ everyone.now.distributeMessage = (message) ->
 
 everyone.connected(  (message) ->
   everyone.now.receiveMessage(this.now.name, message)
-  play.sound('./wavs/sfx/ding.wav')
+  play.sound('./public/wavs/sfx/ding.wav')
 
 )
 
 everyone.now.updateElement = (className, top, left) ->
   everyone.now.receiveElement(className, top, left)
-  play.sound('./wavs/drums/kick.wav')
+  play.sound('./public//wavs/drums/kick.wav')
 
 everyone.now.distributeMoveMessage = (message) ->
   everyone.now.receiveMessage(this.now.name, message)
